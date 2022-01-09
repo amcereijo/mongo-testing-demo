@@ -1,0 +1,43 @@
+{
+  "name": "mongo-testing-demo",
+  "version": "1.0.0",
+  "description": "Example project to show how to test with mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test jest --detectOpenHandles --verbose --maxWorkers 2 --ci"
+  },
+  "keywords": [
+    "node.js",
+    "mongodb",
+    "test",
+    "jest"
+  ],
+  "author": "amcereijo",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "jest-circus": "^27.4.6",
+    "mongodb-memory-server": "^8.1.0"
+  },
+  "dependencies": {
+    "mongodb": "^4.3.0"
+  },
+  "jest": {
+    "bail": true,
+    "testEnvironment": "<rootDir>/test/mongo-test-environment",
+    "coverageReporters": [
+      "json",
+      "text-summary",
+      "lcov",
+      "clover"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**"
+    ],
+    "coveragePathIgnorePatterns": [
+      "test/*"
+    ],
+    "testRunner": "jest-circus/runner"
+  }
+}
