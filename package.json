@@ -17,9 +17,11 @@
   "devDependencies": {
     "jest": "^27.4.7",
     "jest-circus": "^27.4.6",
-    "mongodb-memory-server": "^8.1.0"
+    "mongodb-memory-server": "^8.1.0",
+    "nock": "^13.2.2"
   },
   "dependencies": {
+    "axios": "^0.25.0",
     "mongodb": "^4.3.0"
   },
   "jest": {
